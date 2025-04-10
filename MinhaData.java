@@ -34,8 +34,6 @@ public class MinhaData {
             this.dia = dia;
             this.mes = mes;
             this.ano = ano;
-        }else {
-            this ();
         }
     }
 }
