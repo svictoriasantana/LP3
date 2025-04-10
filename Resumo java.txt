@@ -1,0 +1,8 @@
+JAVA
+* ordem: package -> classes -> métodos (funções)
+  package nomeprograma
+  public class NomePrograma
+      public static void main (String[] args)
+
+*Entrada: scanner nomescanner (import scanner)
+*Saída: System.out.println
