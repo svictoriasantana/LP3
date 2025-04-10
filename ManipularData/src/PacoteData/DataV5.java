@@ -162,30 +162,48 @@ public class DataV5 {
     // menorQue
     public boolean anterior(DataV5 outraData) {
         if (ano < outraData.ano) return true;
-        else if (mes < outraData.mes) return true;
-        else if (dia < outraData.dia) return true;
+        if (ano > outraData.ano) return false;
+
+        if (mes < outraData.mes) return true;
+        if (mes > outraData.mes) return false;
+
+        if (dia < outraData.dia) return true;
         else {return false;}
+        //return dia < outraData.dia;
     }
 
     // menorQue
     public static boolean anterior(DataV5 data1, DataV5 data2) {
         if (data1.ano < data2.ano) return true;
+        if (data1.ano > data2.ano) return false;
+
         else if (data1.mes < data2.mes) return true;
-        else if (data1.dia < data2.dia) return true;
+        else if (data1.mes > data2.mes) return false;
+
+        if (data1.dia < data2.dia) return true;
         else {return false;}
+        //return data1.dia < data2.dia;
     }
 
     // maiorQue
     public boolean posterior(DataV5 outraData) {
         if (ano > outraData.ano) return true;
-        else if (mes > outraData.mes) return true;
-        else if (dia > outraData.dia) return true;
+        if (ano < outraData.ano) return false;
+
+        if (mes > outraData.mes) return true;
+        if (mes < outraData.mes) return false;
+
+        if (dia > outraData.dia) return true;
         else {return false;}
     }
     // maiorQue
     public static boolean posterior(DataV5 data1, DataV5 data2) {
         if (data1.ano > data2.ano) return true;
-        else if (data1.mes > data2.mes) return true;
+        if (data1.ano < data2.ano) return false;
+
+        if (data1.mes > data2.mes) return true;
+        if (data1.mes < data2.mes) return false;
+
         else if (data1.dia > data2.dia) return true;
         else {return false;}
     }

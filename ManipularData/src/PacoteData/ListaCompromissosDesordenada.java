@@ -5,7 +5,7 @@ public class ListaCompromissosDesordenada {
     int tam = 0;
     DataV5 [] lista;
     
-    //Comp = copmpromisso
+    //Comp = compromisso
 
     public ListaCompromissosDesordenada (int capacidade) {
         this.capacidade = capacidade;
