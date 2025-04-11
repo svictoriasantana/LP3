@@ -10,15 +10,15 @@ public class ListaCompromissosOrdenada {
 
     //Comp = compromisso
 
-public ListaCompromissosOrdenada (int capacidade) {
-        this.capacidade = capacidade;
-        lista = new DataV5 [capacidade];
-}
+	public ListaCompromissosOrdenada (int capacidade) {
+        	this.capacidade = capacidade;
+        	lista = new DataV5 [capacidade];
+	}
 
-public ListaCompromissosOrdenada () {
-	capacidade = 10;
-        lista = new DataV5 [capacidade];
-}
+	public ListaCompromissosOrdenada () {
+		capacidade = 10;
+        	lista = new DataV5 [capacidade];
+	}
 
     public int addComp (DataV5 data) {
         if (tam >= capacidade) return -1;
