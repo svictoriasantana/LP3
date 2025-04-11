@@ -37,6 +37,7 @@ public class ListaCompromissosDesordenada {
     }
 
     public boolean VerificaComp (DataV5 data) {
+        if (tam==0) return false;
         for (int i = 0; i<tam; i++) {
             if (data.igualA (lista[i])) return true;
         }
