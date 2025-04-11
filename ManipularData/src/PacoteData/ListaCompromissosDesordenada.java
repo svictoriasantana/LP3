@@ -12,6 +12,11 @@ public class ListaCompromissosDesordenada {
         lista = new DataV5 [capacidade];
     }
 
+    public ListaCompromissosDesordenada () {
+        capacidade = 10;
+        lista = new DataV5 [capacidade];
+    }
+
     public int addComp (DataV5 data) {
         if (tam >= capacidade) return -1;
         if (VerificaComp (data) == false) {
