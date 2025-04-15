@@ -8,9 +8,9 @@ public class Lampada {
 
      public Lampada (){
         estado = false;
-        potencia = 5;
+        potencia = 15;
         qligada = 0;
-        limite = 100;
+        limite = 1000;
     }
 
     public Lampada (double potencia, int limite) {
@@ -24,7 +24,7 @@ public class Lampada {
     public void ligar () {
         if (qligada==limite) {
             System.out.println ("ERRO: limite de ligações atingido!\n");
-        }else {
+        } else if (estado==false) {
             estado = true;
             qligada++;
         }
@@ -47,7 +47,7 @@ public class Lampada {
     }
 
     public boolean devoTrocar () {
-        if (qligada==limite) {
+        if (qligada>=limite) {
             return true;
         }else {
             return false;

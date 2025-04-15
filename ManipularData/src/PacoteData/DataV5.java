@@ -240,4 +240,12 @@ public class DataV5 {
         }
     }
 
+    public String toString () {
+        String[] meses = {
+            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        };
+        return dia + " de " + meses [mes-1] + " de " + ano;
+    }
+
 }

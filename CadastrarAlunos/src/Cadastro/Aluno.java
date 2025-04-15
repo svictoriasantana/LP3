@@ -26,10 +26,13 @@ public class Aluno {
     private static int ano = 0;
 
     public Aluno (int matricula) {
-        if (ano==0) ano = matricula/10;
+        if (ano == 0) ano = matricula/10;
         if (matricula/10 > ano) {
             ano = matricula/10;
             id = 1;        //Passou o ano e reiniciou a contagem de alunos
+        }
+        if(matricula/10 < ano) {
+            matricula = ano * 10 + (matricula % 10); //Se o ano for anterior, muda ano para o atual
         }
         matricula *= 10000;
         matricula += id++;
@@ -55,12 +58,20 @@ public class Aluno {
         email = iniciais + ultimo + "-" + curso + "@uesc.br";
     }
 
+    public Aluno (Aluno a, String curso, int matricula) {
+        this (a.nome, curso, matricula);
+    }
+
     public boolean IgualA (Aluno a) {
-        return true;
+        if (matricula == a.matricula)
+            return true;
+        return false;
     }
 
     public static boolean IgualA (Aluno a1, Aluno a2) {
-        return true;
+        if (a1.matricula == a2.matricula)
+            return true;
+        return false;
     }
 
     public int getMatricula () {
@@ -79,4 +90,7 @@ public class Aluno {
         return email;
     }
     
+    public String toString () {
+        return ("Nome: " + nome + "\nCurso: " + curso + "\nemail: " + email + "\nMatricula: " + matricula);
+    }
 }

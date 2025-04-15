@@ -3,7 +3,7 @@ import PacoteData.DataV5;
 public class UsaDataV5 {
     public static void main(String[] args) {
         DataV5 d1 = new DataV5((byte)1,(byte)1,(short)2000);     //criação de um objeto data d1
-        System.out.println ("Data 1:");
+        System.out.println ("Data 1: " + d1);
         d1.mostraData();
         boolean ok = d1.inicializaData((byte) 1, (byte) 1, (short) 2021);
         if (ok == true)

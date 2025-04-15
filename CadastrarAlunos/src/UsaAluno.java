@@ -1,36 +1,29 @@
 import Cadastro.Aluno;
-import java.util.Scanner;
 
 public class UsaAluno {
     public static void main (String[] args) {
-        Aluno aluno1;
-        Scanner scanf = new Scanner (System.in);
-        System.out.print("\nDigite seu nome: ");
-        String nome = scanf.nextLine(); // lê a linha inteira
-        System.out.print("Digite seu curso: ");
-        String curso = scanf.nextLine();
-        System.out.print("Digite seu matricula: ");
-        int matricula = scanf.nextInt();
-        scanf.nextLine(); // LIMPA o buffer antes de ler a próxima linha
-        aluno1 = new Aluno (nome, curso, matricula);
-        System.out.println("\nNome do aluno 1: " + aluno1.getNome());
-        System.out.println("Curso do aluno 1: " + aluno1.getCurso());
-        System.out.println("Matricula do aluno 1: " + aluno1.getMatricula());
-        System.out.println("E-mail do aluno 1: " + aluno1.getEmail());
+        Aluno aluno1 = new Aluno ("Victoria Andrea Santana", "cic", 20241);
+        Aluno aluno2 = new Aluno ("Robertos Carlos Rocha", "eng", 20241);
+        Aluno aluno3 = new Aluno ("Robertos Carlos Rocha", "eng", 20241);
+        
+        System.out.println (aluno1);
+        System.out.println (aluno2);
+        System.out.println (aluno3);
 
-        Aluno aluno2;
-        System.out.print("\nDigite seu nome: ");
-        nome = scanf.nextLine(); // lê a linha inteira
-        System.out.print("Digite seu curso: ");
-        curso = scanf.nextLine();
-        System.out.print("Digite seu matricula: ");
-        matricula = scanf.nextInt();
-        aluno2 = new Aluno (nome, curso, matricula);
-        System.out.println("\nNome do aluno 2: " + aluno2.getNome());
-        System.out.println("Curso do aluno 2: " + aluno2.getCurso());
-        System.out.println("Matricula do aluno 2: " + aluno2.getMatricula());
-        System.out.println("E-mail do aluno 1: " + aluno2.getEmail());
-        scanf.close();
+        boolean igual = aluno2.IgualA(aluno3);
+        if (igual) {
+            System.out.println ("Alunos 2 e 3 sao a mesma pessoa.\n");
+        } else {
+            System.out.println ("Alunos 2 e 3 sao diferentes.\n");}
+
+        igual = Aluno.IgualA(aluno2, aluno3);
+        if (igual) {
+            System.out.println ("Alunos 2 e 3 sao a mesma pessoa.\n");
+        } else {
+            System.out.println ("Alunos 2 e 3 sao diferentes.\n");}
+        
+        Aluno aluno4 = new Aluno (aluno3, "agro", 20251);
+        System.out.println (aluno4);
     }
 
 }
