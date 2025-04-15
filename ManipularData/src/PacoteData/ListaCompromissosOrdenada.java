@@ -10,10 +10,15 @@ public class ListaCompromissosOrdenada {
 
     //Comp = compromisso
 
-    public ListaCompromissosOrdenada (int capacidade) {
-        this.capacidade = capacidade;
-        lista = new DataV5 [capacidade];
-    }
+	public ListaCompromissosOrdenada (int capacidade) {
+        	this.capacidade = capacidade;
+        	lista = new DataV5 [capacidade];
+	}
+
+	public ListaCompromissosOrdenada () {
+		capacidade = 10;
+        	lista = new DataV5 [capacidade];
+	}
 
     public int addComp (DataV5 data) {
         if (tam >= capacidade) return -1;
@@ -35,16 +40,16 @@ public class ListaCompromissosOrdenada {
     public boolean desmarcarComp (DataV5 data) {
         int indice = buscaBinaria (data);
 	    if (indice>=0) {
-            for (int i = indice; i<tam-1; i++) {
+            	for (int i = indice; i<tam-1; i++) {
 			lista [i] = lista [i+1];
-		    }
-		    lista[tam-1] = null;
-		    tam--;
-		    return true;
+		}
+		lista[tam-1] = null;
+		tam--;
+		return true;
         } else {return false;}
     }
 
-    public boolean VerificaComp (DataV5 data) {     //Busca Binaria
+    public boolean VerificaComp (DataV5 data) {
         if (buscaBinaria(data)>=0) {
             return true;
         } else {

@@ -80,10 +80,6 @@ public class DataV5 {
         return true;
     }  
 
-    public void mostraData() {
-        System.out.println(dia + "/" + mes + "/" + ano);
-    }
-
     /* O método "set" atribui um valor ao campo correspondente 
        e o método "get" retorna o valor do campo correspondente */
 
