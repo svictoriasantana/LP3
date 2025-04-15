@@ -1,6 +1,6 @@
 JAVA
-* ordem: package -> classes -> métodos (funções)
-  package nomeprograma
+* ordem: projeto -> package -> classes -> métodos (funções)
+  package nomeprograma;
   public class NomePrograma
       public static void main (String[] args)
 
